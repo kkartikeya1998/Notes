@@ -1,0 +1,118 @@
+> WHAT'S A GOOD DESIGN?
+	- change is easy, cost of chaging the desgin is minimum
+	- almost impossible to get it right the first time
+	- code is never written, it is always re-written
+
+> HOW TO CREATE A GOOD DESIGN?
+	- let go of the ego
+	- be unemotional
+	- there are two kinds of people who are very dangerous: the who can only follow instructions and those who do not follow instructions
+	- take time to review design and code
+	- good design will hide inherent complexity and eliminates accidental complexity
+	- good design has high cohesion and loose coupling 
+	- don't comment what, instead comment why
+	- a good code is like a joke, just refactor it if it doesn't work
+
+> KIS (KEEP IT SIMPLE) PRINCIPLE!
+	- more complex => more difficult to change
+	- duplication and variety in a code can make it complex
+	- simple keeps you focused
+	- simple solves only real problems we know about
+	- simple fails less
+	- simple is easier to understand, duh!
+	- simple is not necessarily familiar
+
+> COMPLEXITY TYPES:
+	- Inherent: it is of the problem, we have to deal with it, nature of application
+	- Accidental: comes from the solution we use, solution brings complexity on the table, these complexity need more solutions and more complexity and so on
+
+> YAGNIy:
+	- You Aren't Going To Need It, yet
+	- dont implement something until you really need it
+	- when should i implement something? 
+		- how much do you know
+		- cost of implementing 
+	- why don't we postpone
+		-we are scared
+
+> COHESION:
+	- cohesive code takes on only one responsibilities
+	- it does not do many things, focuses on only one thing
+	- we want to change software, but not too expensive
+
+> COUPLING:
+	- coupling is essentially what you depend upon
+	- inheritance increases coupling 
+	- try to see if you can remove coupling
+	- can' remove all the dependencies
+	- make it loose instead of tight
+*		- depending on a class is tight coupling
+*		- depending on an interface is loose coupling
+
+> Keep it DRY:
+	- Don't Repeat Yourself
+	- Don't duplicate -code -effort
+	- every piece of knowledge in a system should have a single unambiguous authorotative representation
+	
+> FOCUS ON SINGLE RESPONSIBILITY PRINCIPLE:
+	- similar to cohesion upto a great extent 
+	- while making a class, make sure the primary resoponsibilty is only a single function
+
+> LONG METHODS:
+	- long methods are bad
+	- many think long methods a bad, but we still see them (cognitive dissonance)
+	- they are hard to test, read, remember, debug
+	- hard to reuse, thus lead to duplication
+	- many reasons to change
+	- low cohesion, high coupling 
+> HOW LONG IS A LONG METHOD, UNDERSTANDING SLAP:
+	- Single Level of Abstraction Principle
+	- keenly focused on keeping the code on that level of abstraction 	
+	
+> COMPOSE METHOD PATTERN:
+	- code should be nicely composed, self-documenting
+	- it has a logical flow of code
+
+> DON'T VIOLATE THE OPEN-CLOSED PRINCIPLE (OCP):
+	- software module should be open from extension but closed from modification
+	- extension:should be able to do a little bit more than it did before	
+	- abstraction and polymorphism are used to enable extension without actually modifying
+	- two options:
+		1. change existing code - not prefered 
+		2. add a small new module of code
+	- when developing software, we should know what kind of extensions would we need in the future
+	- consult a domain expert
+
+> KEEP IN MIND THE LISKOV'S SUBSTITUTION PRINCIPLE:
+	- overuse of inheritance 
+	- inhertiance should be used only for substitutability 
+	-when to to use inheritance:
+		1. if an object of B anywhere an object of A is used, then used inheritance
+ 		2. if an object of B should use an object of A, then use composition/delegation
+	- inheritance demands more from developer than composition or delegation does 
+	- services of the derived class should require no more and promise no less than the corresponding service of the base class
+	 - the user of a base class should be able to use an instance of a derived class without knowing the diference
+
+> GOOD THINGS ABOUT LSP: 
+	- public vs protected in base vs derived
+	- derivated finction cannot throw any new checked exception not thrown by the base (unless the new exceeption extends the old one)
+	- collection of derived does not extend from collection of base
+
+> BAD THINGS ABOUT LSP: 
+	- violates DRY and OCP
+
+> DEPENDENCY INVERSION PRINCIPLE:
+	- A class should should not depend on another class, they both have to depend on an abstraction (interface)
+	- use caution
+
+> INTERFACE SEGREGATION Principle:
+	- cohesion, single responsibility principle but at interface level
+
+> SOLID
+	S ingle Responsibility Principle
+	O pen Closed Principle
+	L iskov's Substituion Principle
+	I nterface Segregation Principle	
+	D epensive Inversion Principle
+
+	- dont forget Don't Repeat Yourself and You Aren't Going to Need It 
